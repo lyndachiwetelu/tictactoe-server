@@ -1,6 +1,8 @@
 ## How to use 
 This App implements a tic tac toe server that is meant to be unbeatable.
 
+It is a stateless API that answers the question, “What move will result in the best outcome for o on this tic-tac-toe board?” 
+
 It is [hosted here](https://server-tictactoe.lyndachiwetelu.com/) 
 
 It expects to receive the current board as a string, passed as query parameter named `board` to the URL like this:
@@ -8,6 +10,8 @@ It expects to receive the current board as a string, passed as query parameter n
 [`https://server-tictactoe.lyndachiwetelu.com?board=+xxo++o++`](https://server-tictactoe.lyndachiwetelu.com?board=+xxo++o++)
 
 where 'x' is your player and 'o' is always the server's player. Blank spaces should be passed as empty cells.
+
+:warning: Please only send lower cased characters to this server
 
 You should expect a response with the new board as a string also something like this:
 "oxxo&nbsp;&nbsp;o&nbsp;&nbsp;"
