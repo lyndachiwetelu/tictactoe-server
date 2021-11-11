@@ -19,7 +19,8 @@ The board will be invalid if:
 - Board is wrong length
 - Moves Ration is unbalanced.
 
-If the board is invalid, the server will respond with a HTTP Status Code `400`, meaning Bad Request
+If the board is invalid, the server will respond with a HTTP Status Code `400`, meaning a 'Bad Request'
+
 Not passing a board to the server also results in a bad request status
 
 ### About the Implementation
