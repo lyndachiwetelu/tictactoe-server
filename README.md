@@ -8,7 +8,7 @@ It expects to receive the current board as a string, passed as query parameter n
 [`https://server-tictactoe.lyndachiwetelu.com?board=+xxo++o++`](https://server-tictactoe.lyndachiwetelu.com?board=+xxo++o++)
 
 You should expect a response with the new board as a string also something like this:
-`oxxo&nbsp; o&nbsp; `
+"oxxo&nbsp; o&nbsp; "
 
 ### Invalid Boards
 
