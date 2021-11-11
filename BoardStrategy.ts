@@ -117,25 +117,6 @@ export class BoardStrategy {
         return null;
     }
 
-    // getPotentialForkPositionsForPlayer(board: number[][], player: number, playerTwoInARow: number): [number, number][] {
-    //     const emptyCellIndexes = this.getAllEmptyCellIndexes(board);
-    //     const potentialForkPositions: [number, number][] = [];
-
-    //     emptyCellIndexes.forEach(position => {
-    //         const boardCopy = board.map(row => row.slice());
-    //         const boardWithPlayedPosition = this.playPosition(boardCopy, position, player);
-    //         const twoInARows = this.getAllTwoInARow(boardWithPlayedPosition, playerTwoInARow);
-
-    //         if ( twoInARows.length === 2 ) {
-    //             potentialForkPositions.push(position);
-    //         }
-    //     }
-    //     );
-
-    //     return potentialForkPositions;
-
-    // }
-
     playPosition(board: number[][], position: [number, number], player: number) : number[][] {
         const row = position[0];
         const column = position[1];
