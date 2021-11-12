@@ -303,7 +303,6 @@ export class BoardStrategy {
         const diagonalSum = diagonal.reduce((a, b) => a + b, 0);
        
         if (diagonalSum === playerSum) {
-            
             const emptyCellIndex = this.getEmptyCellIndexFromTwoInARow(diagonal);
             allPossibleTwoInARows.push({value: diagonal, row: emptyCellIndex, column: emptyCellIndex});
         }
@@ -313,13 +312,11 @@ export class BoardStrategy {
        
 
         if (antiDiagonalSum === playerSum) {
-            
             const emptyCellIndex = this.getEmptyCellIndexFromTwoInARow(antiDiagonal);
-            allPossibleTwoInARows.push({value: antiDiagonal, row: BOARD_DIMENSION - emptyCellIndex - 1, column: emptyCellIndex});
+            allPossibleTwoInARows.push({value: antiDiagonal, row:emptyCellIndex, column: BOARD_DIMENSION - emptyCellIndex - 1});
         }
 
         return allPossibleTwoInARows;
-
     }
      
     
@@ -371,7 +368,7 @@ export class BoardStrategy {
         const antidiagonalSum = antidiagonal.reduce((a, b) => a + b, 0);
         if (antidiagonalSum === playerSum) {
             const emptyCellIndex = this.getEmptyCellIndexFromTwoInARow(antidiagonal);
-            return {row: emptyCellIndex, column: emptyCellIndex};
+            return {row: emptyCellIndex, column: BOARD_DIMENSION - emptyCellIndex - 1};
         }
 
         // check if diagonal has two in a row sum

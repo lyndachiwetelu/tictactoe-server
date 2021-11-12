@@ -16,7 +16,8 @@ test.each([
 
 test.each([
     ['xoxxoo   ', 'xoxxoo o '],
-    ['xoxxxo o ', 'xoxxxooo '],])
+    ['xoxxxo o ', 'xoxxxooo '],
+    ['o xxxo   ', 'o xxxoo  '],])
 ('will respond with correct string for valid board',
     (board, expectedResponse) => {
     // Mock Request

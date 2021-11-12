@@ -316,12 +316,22 @@ test.each([
             [1, 0, 0], [0, -1, 0], [0, -1, -1]
         ],
         -2,
-        [[0, -1, -1], [0, -1, -1]]
+        [[0, -1, -1], [0, -1, -1]],
+        [[2, 0], [0, 1]]
+    ],
+    [
+        [
+            [1, 0, 1], [0, 1, 0], [0, -1, -1]
+        ],
+        2,
+        [[1, 0, 1], [1, 1, 0]],
+        [[0, 1], [2, 0]]
     ]
     ,])(
-    'getAllTwoInARow (%p) should return %p',(board, playerSum, expected) => {
+    'getAllTwoInARow (%p) should return %p',(board, playerSum, expected, expectedRowColumn) => {
         const strategy = new BoardStrategy(board);
         const values : BoardValueType[] = strategy.getAllTwoInARow(board, playerSum)
+        expect(values.map(value => [value.row, value.column])).toEqual(expectedRowColumn);
         expect(values.map(value => value.value)).toEqual(expected);
     }
 );

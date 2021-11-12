@@ -2,7 +2,7 @@ import { BoardPlay } from "../BoardPlay";
 
 // test doPlay
 test.each([
-    ['xoxoxo   ', 'xoxoxo  o'],])(
+    ['xoxoxo   ', 'xoxoxoo  '],])(
     'doPlay(%s)',
     (board, expected) => {
         const boardPlay = new BoardPlay(board);
@@ -12,7 +12,7 @@ test.each([
 
 // test calculatePositionToPlay
 test.each([
-    ['xoxoxo   ', [2, 2] ],
+    ['xoxoxo   ', [2, 0] ],
     ['ooxxox   ', [2, 1] ] ])(
     'CalculatePlayPosition(%s)',
     (board, expected) => {
