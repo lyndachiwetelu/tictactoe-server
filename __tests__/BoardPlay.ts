@@ -2,7 +2,8 @@ import { BoardPlay } from "../BoardPlay";
 
 // test doPlay
 test.each([
-    ['xoxoxo   ', 'xoxoxoo  '],])(
+    ['xoxoxo   ', 'xoxoxoo  '],
+    ['         ', '    o    ']])(
     'doPlay(%s)',
     (board, expected) => {
         const boardPlay = new BoardPlay(board);
