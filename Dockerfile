@@ -10,7 +10,7 @@ RUN yarn build
 FROM node:14-alpine
 WORKDIR /app
 COPY --from=build /app/ .
-RUN yarn global add pm2 typescript
+RUN yarn global add pm2
 EXPOSE 4001
 
 CMD ["sh", "-c", "pm2-runtime start build/server.js"]
