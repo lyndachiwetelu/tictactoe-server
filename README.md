@@ -23,7 +23,7 @@ The board will be invalid if:
 - There is already a winner
 - There are invalid characters
 - Board is wrong length
-- Moves Ration is unbalanced.
+- Moves Ratio is unbalanced.
 
 If the board is invalid, the server will respond with a HTTP Status Code `400`, meaning a 'Bad Request'
 
