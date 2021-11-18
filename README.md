@@ -31,7 +31,7 @@ Not passing a board to the server also results in a bad request status
 
 ### About the Implementation
 
-This is an attempt to implement the Tic Tac Toe startegy outlined here.
+This is an attempt to implement the Tic Tac Toe strategy outlined here.
 https://en.wikipedia.org/wiki/Tic-tac-toe#Strategy
 
 
